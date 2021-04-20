@@ -39,23 +39,23 @@ module.exports = {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
             },
-            {
-                test:/.(s*)css$/,
-                use: [
-                    miniCss.loader,
-                    'css-loader?url=false',
-                    'sass-loader',
-                ]
-            },
             // {
-            //     test: /\.(scss|css)$/,
-            //     use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-            // }, 
-            // {
-            //     test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-            //     type: 'asset/inline',
-                
+            //     test:/.(s*)css$/,
+            //     use: [
+            //         miniCss.loader,
+            //         'css-loader?url=false',
+            //         'sass-loader',
+            //     ]
             // },
+            {
+                test: /\.(scss|css)$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader',miniCss.loader,'css-loader?url=false','sass-loader',],
+            }, 
+            {
+                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                type: 'asset/inline',
+                
+            },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [
