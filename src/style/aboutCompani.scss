@@ -1,0 +1,71 @@
+.about_compani{
+    display: flex;
+    flex-direction: row;
+    background-color:#FBFBFB;
+    margin: 120px 135px;
+    margin-top: 0;
+
+    .about_compani__photo_case{
+        display: flex;
+        flex-direction: row;
+        margin-left:6%;
+        
+
+        div:first-child{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top:30px;
+            margin-right: 30px;
+            img:first-child{
+                
+                margin-bottom: 30px;
+            }
+        }
+
+        div:last-child{
+            margin-top: 60px;
+            margin-right: 30px;
+        }
+
+    }
+
+    .about_compani__info_case{
+        display: flex;
+        flex-direction:column ;
+        max-width: 500px;
+        margin-right:6%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+        
+        .text{
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
+
+        button{
+            width: 222px;
+            height: 71px;
+            background-color: #ffffff;
+            border-color: transparent;
+            cursor: pointer;
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        button:hover{
+            background-color: transparent;
+            border-color: #0000009c;
+        }
+    }
+}

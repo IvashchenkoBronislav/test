@@ -1,0 +1,38 @@
+.our_projects{
+    display: flex;
+    flex-direction: column;
+    margin: 120px 135px;
+    margin-top:0;
+    .our_projects__case{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        .photo_case{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        button{
+            position: relative;
+            margin-left: auto;
+            width: 222px;
+            height: 71px;
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            color: #fff;
+            text-transform: uppercase;
+            background-color:  #333333;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #636262 ;
+
+        }
+        
+    }
+}

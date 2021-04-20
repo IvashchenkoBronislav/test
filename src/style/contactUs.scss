@@ -1,0 +1,100 @@
+.contact_us{
+    display: flex;
+    flex-direction: column;
+    margin:120px 135px;
+    margin-top: 0;
+    .contact_us__case{
+        display: flex;
+        flex-direction: row;
+
+        .contact_us__case__form{
+            display: flex;
+            flex-direction: column;
+            max-width: 391px;
+            input{
+                width: 360px;
+                height: 39px;
+                margin: 5px;
+                background: #F3F3F3;
+                border-color: transparent;
+                outline: none;  
+                padding-left:22px;
+            }
+
+            input::placeholder{
+                font-family: TT Hoves;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                // padding: 14px 22px;
+                
+            }
+            
+
+            textarea{
+                margin: 5px;
+                width: 343px;
+                height: 125px;
+                background: #F3F3F3;
+                border-color: transparent;
+                outline: none;
+                padding: 14px 22px;
+                resize:none;
+            }
+
+            textarea::placeholder{
+                font-family: TT Hoves;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            .form_confirm{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin: 5px;
+                span{
+                    width: 85%;
+                    font-family: TT Hoves;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #333333;
+                }
+            }
+
+            
+
+            button{
+                
+                width: 222px;
+                height: 71px;
+                font-family: TT Hoves;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                color: #fff;
+                text-transform: uppercase;
+                background-color:  #333333;
+                cursor: pointer;
+                margin: 5px;
+            }
+    
+            button:hover{
+                background-color: #636262;
+            }
+
+
+        }
+
+        .contact_us__case__photo{
+            width: 749px;
+            height: 369px;
+            margin: 10px 20px;
+        }
+    }
+}

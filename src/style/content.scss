@@ -1,0 +1,84 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    margin: 120px 135px;
+    margin-top: 0;
+
+    .content__project_case{
+        width: 40%;
+        margin-top: 15%;
+        
+
+        .span_cont{
+            
+            text-transform: uppercase;
+            span:first-child{
+                font-family: TT Hoves;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 64px;
+                line-height: 64px;
+                color: #BDBDBD;
+            }
+            
+            span:last-child{
+                font-family: TT Hoves;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 64px;
+                line-height: 64px;
+                color: #333333;
+            }
+        }
+
+        .arrow{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 130px;
+            margin-top: 90px;
+
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 52px;
+                height: 52px;
+                border: 1px solid #F2F2F2;
+            }
+
+            div:hover{
+                background-color: #F2F2F2;
+            }
+        }
+
+        .photo_counter{
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 24px;
+            color:  #BDBDBD;
+            margin-top: 90px;
+            margin-left: 20px;
+            user-select: none;
+    
+            svg{
+                position: relative;
+                top:8px;
+            }
+        }
+
+        
+    }
+
+    
+    .content__photo{
+        // width: 50%;
+        
+        .conten__photo_building{
+            width: 100%;
+        }
+    }
+}

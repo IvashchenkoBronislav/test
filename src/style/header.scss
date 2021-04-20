@@ -1,0 +1,43 @@
+.header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 135px;
+
+    .header__logo{
+        svg{
+            width: 100px;
+        }
+    }
+
+    .header__nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+        margin-right: 20%;
+        
+        
+
+        button{
+            color:#333333;
+            background: transparent;
+            border:none;
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 12px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 1px solid transparent;
+            padding: 10px 2px;
+        }
+        button:hover{
+            border-top: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+        }
+    }
+
+}

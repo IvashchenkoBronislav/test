@@ -1,0 +1,45 @@
+
+
+
+.basic_task{
+    display: flex;
+    flex-direction: column;
+    margin:120px 135px;
+    margin-top: 0;
+    .basic_task__titul{
+
+    }
+
+    .basic_task__case{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .basic_task__case__info{
+            display: flex;
+            flex-direction: row;
+            .big_num{
+                font-family: SFProDisplay;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 200px;
+                line-height: 239px;
+                display: flex;
+                align-items: center;
+                color: #F2F2F2;
+                margin-right: 30px;
+            }
+            .info_text{
+                font-family: TT Hoves;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 22px;
+                line-height: 36px;
+                color: #333333;
+                margin-top: 60px;
+                max-width: 420px;
+            }
+        }
+
+        
+    }
+}

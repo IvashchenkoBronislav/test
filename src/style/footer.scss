@@ -1,0 +1,99 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 120px 135px 60px;
+    margin-top: 0;
+    background: #2C2C2C;
+    border-bottom: 1px solid #505050;
+    
+    
+    span{
+        font-family: TT Hoves;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+    }
+
+    .footer__info{
+        display: flex;
+        flex-direction: column;
+        .footer__info__nav{
+            display: flex;
+            flex-direction: column;
+
+            button{
+                height: 24px;
+                font-family: TT Hoves;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: white;
+                border-color: transparent;
+                background: transparent;
+                padding: 0;
+                text-align: start;
+                margin: 8px;
+                margin-left: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .footer__contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        div{
+
+            display: flex;
+            flex-direction: row;
+            
+            span{
+                max-width: 314px;
+                font-family: TT Hoves;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                margin-left: 14px;
+            }
+        }
+
+        
+    }
+
+    .footer__social_media{
+        display: flex;
+        flex-direction: column;
+        min-width: 193px;
+        
+        .footer__social_media__nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: transparent;
+            border: transparent;
+            margin-top:25px;
+        }
+    }
+}
+
+.footer_end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2C2C2C;
+    span{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 22px;
+        color: #c8c8c880;
+        margin: 24px 0;
+    }
+}
