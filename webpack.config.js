@@ -7,7 +7,6 @@ const miniCss = require('mini-css-extract-plugin');
 module.exports = {
     entry: {
         main: path.resolve(__dirname, './src/js/index.js'),
-        
     },
 
     output: {
@@ -15,6 +14,12 @@ module.exports = {
         filename: '[name].bundle.js',
     },
 
+    plugins: {
+        'postcss-preset-env': {
+            browsers: 'last 2 versions',
+        },
+    },
+    
     plugins: [
         new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
@@ -22,12 +27,16 @@ module.exports = {
             filename: 'index.html', // название выходного файла
         }),
         new CleanWebpackPlugin(),
+        
+         
         new miniCss({
 			filename: '../dist/css/style.css',
-		}),    
+		}),        
     ],
 
     module: {
+
+        
         rules: [
             {
                 test: /\.js$/,  
@@ -38,36 +47,25 @@ module.exports = {
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
-            },
-            // {
-            //     test:/.(s*)css$/,
-            //     use: [
-            //         miniCss.loader,
-            //         'css-loader?url=false',
-            //         'sass-loader',
-            //     ]
-            // },
-            {
-                test: /\.(scss|css)$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader',miniCss.loader,'css-loader?url=false','sass-loader',],
-            }, 
-            {
-                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-                type: 'asset/inline',
                 
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test:/.(s*)css$/,
                 use: [
-                {
-                    loader: 'file-loader',
-                    options: {
-                    name: '[name].[ext]',
-                    outputPath: 'src/font/'
-                    }
-                }
+                    miniCss.loader,
+                    'css-loader?url=false',
+                    'sass-loader',
                 ]
-            }
+            },
+            // {
+            //     test: /\.(scss|css)$/,
+            //     use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+            // }, 
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'file-loader',
+                
+              },
         ]
     }
 }
