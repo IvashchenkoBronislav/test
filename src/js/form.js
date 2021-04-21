@@ -30,7 +30,7 @@ starDell(messege,starMessege)
 sendButton.addEventListener("click",()=>{
     if(phoneNumber.value != false){
         if(eMail.value !=false){
-            if(sendButton.value !=false){
+            if(messege.value !=false){
                 alert("Вы не написали свой запрос в Сообщении, укажите пожалуста")
             }
         }else{
