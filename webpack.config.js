@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const miniCss = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 
 module.exports = {
@@ -31,7 +32,15 @@ module.exports = {
          
         new miniCss({
 			filename: '../dist/css/style.css',
-		}),        
+		}),
+        new CopyPlugin({
+            patterns: [
+              { from: path.resolve(__dirname, 'src/font'), to: path.resolve(__dirname,'dist/css') },
+            ],
+            options: {
+              concurrency: 100,
+            },
+          }),        
     ],
 
     module: {
@@ -57,10 +66,7 @@ module.exports = {
                     'sass-loader',
                 ]
             },
-            // {
-            //     test: /\.(scss|css)$/,
-            //     use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-            // }, 
+            
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
