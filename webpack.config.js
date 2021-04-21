@@ -1,11 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
+const miniCss = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, './src/js/index.js'),
+        style: path.resolve(__dirname, './src/js/style.js'),
     },
 
     output: {
@@ -19,7 +19,11 @@ module.exports = {
             template: path.resolve(__dirname, './src/index.html'), // шаблон
             filename: 'index.html', // название выходного файла
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+
+        new miniCss({
+            filename: './css/style.css',
+         }),
     ],
 
     module: {
@@ -35,9 +39,17 @@ module.exports = {
                 type: 'asset/resource',
             },
             {
-                test: /\.(scss|css)$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-            }, 
+                test:/\.(s*)css$/,
+                use: [
+                   miniCss.loader,
+                   'css-loader',
+                   'sass-loader',
+                ]
+            },
+            // {
+            //     test: /\.(scss|css)$/,
+            //     use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+            // }, 
             {
                 test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
                 type: 'asset/inline',
