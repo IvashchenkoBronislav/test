@@ -1,8 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const miniCss = require('mini-css-extract-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
 
 
 module.exports = {
@@ -15,37 +13,16 @@ module.exports = {
         filename: '[name].bundle.js',
     },
 
-    plugins: {
-        'postcss-preset-env': {
-            browsers: 'last 2 versions',
-        },
-    },
-    
     plugins: [
         new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
             template: path.resolve(__dirname, './src/index.html'), // шаблон
             filename: 'index.html', // название выходного файла
         }),
-        new CleanWebpackPlugin(),
-        
-         
-        new miniCss({
-			filename: '../dist/css/style.css',
-		}),
-        new CopyPlugin({
-            patterns: [
-              { from: path.resolve(__dirname, 'src/font'), to: path.resolve(__dirname,'dist/css') },
-            ],
-            options: {
-              concurrency: 100,
-            },
-          }),        
+        new CleanWebpackPlugin()
     ],
 
     module: {
-
-        
         rules: [
             {
                 test: /\.js$/,  
@@ -56,22 +33,15 @@ module.exports = {
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
-                
             },
             {
-                test:/.(s*)css$/,
-                use: [
-                    miniCss.loader,
-                    'css-loader?url=false',
-                    'sass-loader',
-                ]
-            },
-            
+                test: /\.(scss|css)$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+            }, 
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'file-loader',
-                
-              },
+                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                type: 'asset/inline',
+            },
         ]
     }
 }
