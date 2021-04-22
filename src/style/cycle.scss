@@ -1,0 +1,69 @@
+.content__photo{
+    overflow: hidden;
+    width: 770px;
+    position: relative;
+    .case_photo{
+        
+        display: flex;
+        flex-direction: row;
+        width: 110%;
+        position: relative;
+        transition: all 1s ease-out;
+    }
+}
+
+.photo_counter{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#case_count{
+    position: relative;
+}
+
+#count{
+    left:-6px
+}
+#count1{
+    position: absolute;
+    width: 29px;
+    height: 24px;
+    background-color:transparent;
+    top: 0px;
+    
+}
+
+.animation{
+    animation-name:change;
+    animation-duration: 0.5s;
+}
+
+@keyframes change{
+    0%{
+        background-color:transparent;
+    }
+
+    10%{
+        background-color:#ffffff;
+    }
+
+    // 50%{
+    //     background-color:#ffffff;
+    // }
+
+    100%{
+        background-color:transparent;
+    }
+}
+
+#count_statick{
+    position: absolute;
+    left:25px;  
+}
+
+#count_statick1{
+    position: absolute;
+    left:58px;  
+}
+
