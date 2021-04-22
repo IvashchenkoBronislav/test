@@ -84,3 +84,51 @@
         }
     }
 }
+
+.photo_of_project2{
+    height: 255px;
+}
+
+.button_img{
+    position: relative;
+    .button_case:hover{
+        background-color: #333333;
+    }
+    .button_case{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 491px;
+        height: 207px;
+        padding: 48px 0 0 79px;
+        background-color: #333333d6;
+        cursor: pointer;
+
+        
+
+
+        div:first-child{
+            width: 417px;
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 64px;
+            color: #FFFFFF;
+        }
+
+        div:last-child{
+            font-size: 12px;
+            line-height: 12px;
+            text-transform: uppercase;
+            color:white;
+            svg{
+                position: relative;
+                left: 9px;
+                top: 9px;
+
+            }
+        }
+    }
+
+}
