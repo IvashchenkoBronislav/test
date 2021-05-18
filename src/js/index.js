@@ -1,3 +1,4 @@
+import './media.js';
 import './style.js';
 import './photo.js';
 import './nav.js';

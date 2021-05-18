@@ -1,0 +1,38 @@
+@media(max-width:1458px){
+    .wrapper{
+
+    }
+
+    .basic_task{
+        .titul{
+            text-align: center;
+        }
+        .basic_task__case{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .our_projects{
+        .titul{
+            text-align: center;
+        }
+
+        .our_projects__case{
+            .photo_case{
+                flex-direction: column;
+                justify-content: center;
+                align-self: center;
+                .button_img{
+                    justify-content: center;
+
+                }
+            }
+
+            img{
+                object-fit: none;
+                image-rendering:auto;
+            }
+        }
+    }
+};

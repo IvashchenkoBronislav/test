@@ -6,7 +6,9 @@ const count = document.querySelector("#count");
 const count1 = document.querySelector('#count1');
 
 let nowPos = parseInt(photoCase.style.left);
-const step = "770px";
+const step = bilding.clientWidth;
+
+console.log(bilding.clientWidth)
 
 const animAct = ()=>{
     count1.classList = "animation"
@@ -17,11 +19,11 @@ const animAct = ()=>{
 
 const stepUpDown = ()=>{
     if(photoCase.style.left === "0px" ){
-        photoCase.style.left = `-770px`;
+        photoCase.style.left = `-${step-30}px`;
         count.innerHTML = "02";
         count1.classList.toggle = "animation";
         animAct();
-    }else if(photoCase.style.left === "-770px"){
+    }else if(photoCase.style.left <= "-770px"){
         photoCase.style.left = `0px`;
         count.innerHTML = "01";
         count1.classList.toggle = "animation";

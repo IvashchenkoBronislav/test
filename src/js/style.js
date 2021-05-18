@@ -8,3 +8,5 @@ import "../style/ourProjects.scss";
 import "../style/contactUs.scss";
 import "../style/footer.scss";
 import "../style/cycle.scss";
+import "../style/media.scss"
+
